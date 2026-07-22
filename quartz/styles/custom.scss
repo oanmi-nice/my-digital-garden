@@ -1,3 +1,177 @@
 @use "./variables.scss" as *;
 
 // put your custom CSS here!
+
+/* ==========================================================================
+   Baseline Cupertino Fusion for Quartz
+   Part 1 — Foundation
+   ========================================================================== */
+
+/* ---------- Google Font ---------- */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+/* ---------- Цветовая палитра ---------- */
+
+:root {
+
+  --light: #f6f7f9;
+  --lightgray: #ebedf1;
+  --gray: #b9c0ca;
+
+  --darkgray: #49505a;
+  --dark: #2b2f35;
+
+  --secondary: #73b6ee;
+  --tertiary: #4ea3ea;
+
+  --highlight: rgba(115,182,238,.12);
+
+  --headerFont: "Poppins", sans-serif;
+  --bodyFont: "Poppins", sans-serif;
+  --codeFont: "JetBrains Mono", monospace;
+}
+
+/* ---------- Общий фон ---------- */
+
+body {
+    font-family: var(--bodyFont);
+    background: #f3f5f8;
+    color: var(--darkgray);
+    font-weight: 400;
+    letter-spacing: .01em;
+}
+
+/* ---------- Главный контейнер ---------- */
+
+.center article {
+
+    background: white;
+
+    border-radius: 22px;
+
+    padding: 48px 56px;
+
+    box-shadow:
+        0 1px 3px rgba(0,0,0,.03),
+        0 10px 40px rgba(0,0,0,.04);
+
+    border: 1px solid rgba(0,0,0,.04);
+}
+
+/* ---------- Боковые панели ---------- */
+
+.sidebar {
+
+    background: transparent;
+
+}
+
+.sidebar > * {
+
+    background: rgba(255,255,255,.72);
+
+    backdrop-filter: blur(18px);
+
+    border-radius: 18px;
+
+    padding: 18px;
+
+    border: 1px solid rgba(0,0,0,.04);
+
+    box-shadow: 0 4px 20px rgba(0,0,0,.03);
+
+}
+
+/* ---------- Header ---------- */
+
+.page-header {
+
+    margin-bottom: 1.2rem;
+
+}
+
+/* ---------- Footer ---------- */
+
+footer {
+
+    opacity: .75;
+
+}
+
+/* ---------- Скролл ---------- */
+
+::-webkit-scrollbar {
+
+    width: 10px;
+
+}
+
+::-webkit-scrollbar-track {
+
+    background: transparent;
+
+}
+
+::-webkit-scrollbar-thumb {
+
+    background: #d8dde6;
+
+    border-radius: 999px;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+
+    background: #bfc7d2;
+
+}
+
+/* ---------- Плавность ---------- */
+
+* {
+
+    transition:
+
+        background-color .18s ease,
+
+        color .18s ease,
+
+        border-color .18s ease,
+
+        box-shadow .18s ease;
+
+}
+
+/* ---------- Кнопки ---------- */
+
+button {
+
+    border-radius: 12px;
+
+}
+
+/* ---------- Поля ---------- */
+
+input,
+textarea,
+select {
+
+    border-radius: 12px;
+
+    border: 1px solid #dfe4ea;
+
+    background: white;
+
+}
+
+input:focus,
+textarea:focus {
+
+    outline: none;
+
+    border-color: var(--secondary);
+
+    box-shadow: 0 0 0 4px rgba(115,182,238,.15);
+
+}
